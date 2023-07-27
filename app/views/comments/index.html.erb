@@ -1,14 +1,13 @@
 <p style="color: green"><%= notice %></p>
-
-<h1>Comments</h1>
-
-<div id="comments">
-  <% @comments.each do |comment| %>
-    <%= render comment %>
-    <p>
-      <%= link_to "Show this comment", comment %>
-    </p>
-  <% end %>
+<h1>Pets</h1>
+<div id="pets">
+<div class="container">
+<div class="row">
+<% @pets.each do |pet| %>
+<%= render pet %>
+<%= link_to "Show this pet", pet %>
+<% end %>
 </div>
-
-<%= link_to "New comment", new_comment_path %>
+</div>
+</div>
+<%= link_to "New pet", new_pet_path %>

@@ -13,6 +13,8 @@ gem "faker"
 
 gem "figaro"
 
+gem 'activestorage'
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 

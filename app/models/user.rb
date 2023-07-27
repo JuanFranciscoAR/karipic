@@ -6,5 +6,7 @@ class User < ApplicationRecord
 
   has_many :comments #un usuario va tener mucho comentarios
   has_many :images, as: :imageable # los usuario stendras muchas imagenes, llave polimorfica
+
+  accepts_nested_attributes_for :images
         
 end

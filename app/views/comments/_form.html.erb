@@ -2,7 +2,11 @@
   <% if comment.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
-
+      <div class="form-group">
+        <%= form.fields_for :images do |image_form| %>
+          <%= image_form.file_field :url, multiple: true, class: 'form-control' %>
+        <% end %>
+      </div>
       <ul>
         <% comment.errors.each do |error| %>
           <li><%= error.full_message %></li>

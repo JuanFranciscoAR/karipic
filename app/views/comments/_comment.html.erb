@@ -1,12 +1,17 @@
-<div id="<%= dom_id comment %>">
-  <p>
-    <strong>Title:</strong>
-    <%= comment.title %>
-  </p>
 
-  <p>
-    <strong>Description:</strong>
-    <%= comment.description %>
-  </p>
-
+<div class="col-3">
+<div class="card">
+<%= image_tag comment.images[0], class: 'card-img-top' %>
+<div class="card-body">
+<div class="owner-avatar">
+<%= image_tag comment.user.images[0].url, class: 'rounded-circle w-100' %>
+</div>
+<h5 class="card-title"><%= comment.name %></h5>
+<p class="card-text">
+<strong>Raza:</strong><%= comment.race%><br>
+<strong>Edad:</strong><%= comment.age %><br>
+<strong>Género:</strong><%= comment.gender %>
+</p>
+</div>
+</div>
 </div>
